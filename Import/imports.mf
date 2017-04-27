@@ -1,0 +1,9 @@
+<imports>
+  <package name="ExtCommon" path="ExtCommon\Import" />
+  <package name="com.aras.innovator.cui_default" path=".\">
+    <dependson name="jp.co.neo.Logoff" />
+  </package>
+  <package name="jp.co.neo.Logoff" path="Logoff\Import">
+    <dependson name="ExtCommon" />
+  </package>
+</imports>

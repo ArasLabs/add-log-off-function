@@ -1,0 +1,10 @@
+﻿<AML>
+ <Item type="CommandBarButton" id="3CC06EB811CE434D9BB9F2E8EFD6719A" action="add">
+  <additional_data>{}</additional_data>
+  <image>../Images/ClaimTask.svg</image>
+  <label xml:lang="en">LogOff</label>
+  <on_click_handler keyed_name="z_Log_Off_Method" type="Method">BE8C421F6ACD4283B3042956C0F27B4D</on_click_handler>
+  <tooltip_template xml:lang="en">LogOff</tooltip_template>
+  <name>com.aras.innovator.cui_default.mwt_main_toolbar_Logoff</name>
+ </Item>
+</AML>

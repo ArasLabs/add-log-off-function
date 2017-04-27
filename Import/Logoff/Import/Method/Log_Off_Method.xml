@@ -1,0 +1,29 @@
+﻿<AML>
+ <Item type="Method" id="BE8C421F6ACD4283B3042956C0F27B4D" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[var topWindow = TopWindowHelper.getMostTopWindowWithAras(window);
+if (topWindow.parent !== parent.parent) {
+    topWindow.location.reload();
+    return;
+}
+
+main.menu.asyncDirtyItemsHandler(topWindow).then(function(res) {
+    if (res && !res.logout_confirmed) {
+        return res;
+    }
+    return main.menu.asyncOpenedWindowsHandler("onbeforeunload");
+}).then(function(res) {
+    
+    // change onbeforeunload handler (show or not confirm dialog)
+    if (topWindow.aras.isDirtyItems() || ((topWindow.aras.getOpenedWindowsCount() > 0) && !topWindow.aras.getCommonPropertyValue('exitWithoutSavingInProgress'))) {
+        topWindow.onbeforeunload = function() { return topWindow.aras.getResource("", "setup.beforeunload_warning"); };
+    } else {
+        topWindow.onbeforeunload = function(){};
+    }
+    topWindow.open('', '_self');
+    topWindow.open(topWindow.aras.getInnovatorUrl(),'_self');
+});]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>z_Log_Off_Method</name>
+ </Item>
+</AML>

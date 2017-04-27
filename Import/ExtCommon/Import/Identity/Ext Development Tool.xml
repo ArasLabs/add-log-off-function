@@ -1,0 +1,12 @@
+﻿<AML>
+ <Item type="Identity" id="AB952AEB244A4598BBA1C63587062F84" action="add">
+  <is_alias>0</is_alias>
+  <name>Ext Development Tool</name>
+  <Relationships />
+ </Item>
+ <Item type="Member" id="5DE13FFA157A41608276B8B99EB3BB6B" action="add">
+  <related_id keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</related_id>
+  <sort_order>128</sort_order>
+  <source_id keyed_name="Ext Development Tool" type="Identity">AB952AEB244A4598BBA1C63587062F84</source_id>
+ </Item>
+</AML>
